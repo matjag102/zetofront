@@ -18,7 +18,8 @@ import { GlownaOpisComponent } from './glowna-opis/glowna-opis.component';
 import { CarouselModule } from './carousel/carousel.module';
 import { GlownaComponent } from './glowna/glowna.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import Swal from 'sweetalert2';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     CarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
