@@ -10,15 +10,20 @@ export class LoginService {
 
   constructor(private http:HttpClient) { }
 
+  //szczegoly o uzytkowniku, kto jest zalogowany
+  public getCurrentUser(){
+    return this.http.get(`${baseUrl}/current-user`);
+  }
+
   //generowanie tokenu
 
   public generateToken(loginData: any){
     return this.http.post(`${baseUrl}/generate-token`, loginData);
   }
   //LOGIN USER local storage
-  public loginUser(token:any){
-    localStorage.setItem("token", token);
-    return true
+  public loginUser(token: any){
+    localStorage.setItem('token',token);
+    return true;
   }
 
   //czy zalogowany
@@ -44,7 +49,7 @@ export class LoginService {
 
   // get token
   public getToken(){
-    return localStorage.getItem("token");
+    return localStorage.getItem('token');
   }
 
   // szczegoly usera

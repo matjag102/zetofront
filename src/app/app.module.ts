@@ -13,13 +13,16 @@ import { MatInputModule } from '@angular/material/input';
 import { RejestracjaComponent } from './rejestracja/rejestracja.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { RegulaminComponent } from './regulamin/regulamin.component';
-import { StopkaComponent } from './stopka/stopka.component';
 import { GlownaOpisComponent } from './glowna-opis/glowna-opis.component';
 import { CarouselModule } from './carousel/carousel.module';
 import { GlownaComponent } from './glowna/glowna.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
+import { StopkaComponent } from './stopka/stopka.component';
+import { authInterceptorProviders } from './service/auth.interceptor';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { UzytkownikDashboardComponent } from './uzytkownik/uzytkownik-dashboard/uzytkownik-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +31,11 @@ import Swal from 'sweetalert2';
     RejestracjaComponent,
     KontaktComponent,
     RegulaminComponent,
-    StopkaComponent,
     GlownaOpisComponent,
     GlownaComponent,
+    StopkaComponent,
+    AdminDashboardComponent,
+    UzytkownikDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,7 @@ import Swal from 'sweetalert2';
     HttpClientModule,
     MatSnackBarModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
