@@ -64,8 +64,8 @@ export class LoginService {
     }
   }
   // pobieranie roli
-  //public getUserRole(){
-    //let user=this.getUser()
-    //return
-  //}
+   public getUserRole(){
+    let user=this.getUser()
+    return user.authorities[0].authority;
+  }
 }
