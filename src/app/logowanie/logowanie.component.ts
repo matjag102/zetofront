@@ -59,12 +59,14 @@ export class LogowanieComponent implements OnInit {
             if(this.login.getUserRole()=="ADMIN"){
                 //strona admina
                 //window.location.href='/admin';
-                this.router.navigate(['admin'])
+                this.router.navigate(['admin']);
+                this.login.loginStatusSubject.next(true);
             }
             else if(this.login.getUserRole()=="USER"){
               //strona uzytkownika
               //window.location.href='/uzytkownik-dashboard';
-              this.router.navigate(['uzytkownik-dashboard'])
+              this.router.navigate(['uzytkownik-dashboard']);
+              this.login.loginStatusSubject.next(true);
             }
             else{
               this.login.logout();
