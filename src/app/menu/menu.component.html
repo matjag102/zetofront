@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <div class="menu">
+      <button mat-button routerLink="">STRONA GŁÓWNA</button>
+      <button mat-button>REZERWACJA</button>
+      <button mat-button routerLink="kontakt">KONTAKT</button>
+      <button mat-button routerLink="regulamin">REGULAMIN</button>
+      <button mat-button routerLink="logowanie" *ngIf="!login.isLoggedIn()">LOGOWANIE</button>
+      <button mat-button routerLink="rejestracja" *ngIf="!login.isLoggedIn()">REJESTRACJA</button>
+      <button mat-button class="example-icon" *ngIf="login.isLoggedIn()">
+        Witaj {{login.getUser().imie}} {{login.getUser().nazwisko}}!
+      </button>
+      <button mat-button class="example-icon" (click)="wyloguj()" *ngIf="login.isLoggedIn()">WYLOGUJ SIĘ!</button>
+    </div>
+  </mat-toolbar>

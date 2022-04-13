@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { LoginService } from '../service/login.service';
 
@@ -21,7 +22,7 @@ export class LogowanieComponent implements OnInit {
     email: '',
     haslo: '',
   }
-  constructor(private _snackBar: MatSnackBar, private login: LoginService) { }
+  constructor(private _snackBar: MatSnackBar, private login: LoginService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -57,11 +58,13 @@ export class LogowanieComponent implements OnInit {
             //redirect... USER: user-strona robocze nazwy moga ulec zmianie
             if(this.login.getUserRole()=="ADMIN"){
                 //strona admina
-                window.location.href='/admin';
+                //window.location.href='/admin';
+                this.router.navigate(['admin'])
             }
             else if(this.login.getUserRole()=="USER"){
               //strona uzytkownika
-              window.location.href='/uzytkownik-dashboard';
+              //window.location.href='/uzytkownik-dashboard';
+              this.router.navigate(['uzytkownik-dashboard'])
             }
             else{
               this.login.logout();

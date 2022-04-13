@@ -23,6 +23,7 @@ import { StopkaComponent } from './stopka/stopka.component';
 import { authInterceptorProviders } from './service/auth.interceptor';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { UzytkownikDashboardComponent } from './uzytkownik/uzytkownik-dashboard/uzytkownik-dashboard.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { UzytkownikDashboardComponent } from './uzytkownik/uzytkownik-dashboard/
     GlownaComponent,
     StopkaComponent,
     AdminDashboardComponent,
-    UzytkownikDashboardComponent
+    UzytkownikDashboardComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
