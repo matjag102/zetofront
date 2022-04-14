@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UzytkownikService } from '../service/uzytkownik.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -20,7 +21,8 @@ export class RejestracjaComponent implements OnInit {
     telefon: new FormControl('', Validators.required)
   });
 
-  constructor(private uzytkownikService:UzytkownikService, private _snackBar: MatSnackBar) { }
+
+  constructor(private uzytkownikService:UzytkownikService, private _snackBar: MatSnackBar, private router:Router) { }
 
   public uzytkownik={
     imie:'',
@@ -79,7 +81,8 @@ export class RejestracjaComponent implements OnInit {
         //   duration: 3000,
         //   verticalPosition: 'top'
         // })
-        Swal.fire('Sukces!','Zostałeś zarejestrowany!', 'success');
+        Swal.fire('Sukces!','Zostałeś zarejestrowany! <br>Zostaniesz przekierowany do logowania.', 'success');
+        this.router.navigate(['logowanie']);
       },
       (error)=>{
         // oj coś nie git :0
