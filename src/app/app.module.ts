@@ -24,6 +24,12 @@ import { authInterceptorProviders } from './service/auth.interceptor';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { UzytkownikDashboardComponent } from './uzytkownik/uzytkownik-dashboard/uzytkownik-dashboard.component';
 import { MenuComponent } from './menu/menu.component';
+import { ProfilComponent } from './profil/profil.component';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -37,7 +43,10 @@ import { MenuComponent } from './menu/menu.component';
     StopkaComponent,
     AdminDashboardComponent,
     UzytkownikDashboardComponent,
-    MenuComponent
+    MenuComponent,
+    ProfilComponent,
+    SidebarComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +61,10 @@ import { MenuComponent } from './menu/menu.component';
     MatInputModule,
     CarouselModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatListModule,
+    MatCardModule,
+    MatTableModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

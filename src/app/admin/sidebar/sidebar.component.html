@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-action-list>
+        <div mat-subheader>Menu</div>
+        <button mat-list-item routerLink="/admin"> 
+            <mat-icon mat-list-icon>home</mat-icon>Home
+        </button>
+        <button mat-list-item routerLink="profil"> 
+            <mat-icon mat-list-icon>account_circle</mat-icon>Profil
+        </button>
+        <button mat-list-item (click)="wyloguj()" *ngIf="isLoggedIn && user"> 
+            <mat-icon mat-list-icon>logout</mat-icon>Wyloguj
+        </button>
+    </mat-action-list>
+</mat-card>

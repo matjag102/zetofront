@@ -1,0 +1,22 @@
+<mat-card *ngIf="uzytkownik">
+    <h1>Twój profil</h1>
+    <mat-card-content>
+        <div class="dane">
+            <h1>{{uzytkownik.imie}} {{uzytkownik.nazwisko}}</h1>
+            <table class="table">
+                <tr>
+                    <td>Adres-email:</td>
+                    <td>{{uzytkownik.email}}</td>
+                </tr>
+                <tr>
+                    <td>Telefon:</td>
+                    <td>{{uzytkownik.telefon}}</td>
+                </tr>
+                <tr>
+                    <td>Twoja Rola:</td>
+                    <td>{{uzytkownik.authorities[0].authority}}</td>
+                </tr>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>

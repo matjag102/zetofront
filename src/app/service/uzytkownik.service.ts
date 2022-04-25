@@ -11,8 +11,7 @@ export class UzytkownikService {
     
   }
 
-  // dodanie uzytkownika
-
+  // rejestracja
   public dodajUzytkownik(uzytkownik:any){
     return this.http.post(`${baseUrl}/uzytkownik/add`, uzytkownik);
   }

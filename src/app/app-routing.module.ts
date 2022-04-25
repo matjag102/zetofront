@@ -4,11 +4,13 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
 import { GlownaComponent } from './glowna/glowna.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { LogowanieComponent } from './logowanie/logowanie.component';
+import { ProfilComponent } from './profil/profil.component';
 import { RegulaminComponent } from './regulamin/regulamin.component';
 import { RejestracjaComponent } from './rejestracja/rejestracja.component';
 import { AdminGuard } from './service/admin.guard';
 import { NormalGuard } from './service/normal.guard';
 import { UzytkownikDashboardComponent } from './uzytkownik/uzytkownik-dashboard/uzytkownik-dashboard.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   {
@@ -35,6 +37,16 @@ const routes: Routes = [
     path: 'admin',
     component: AdminDashboardComponent,
     canActivate:[AdminGuard],
+    children:[
+      {
+        path:'',
+        component: WelcomeComponent,
+      },
+      {
+        path:'profil',
+        component: ProfilComponent,
+      }
+    ]
   },
   {
     path: 'uzytkownik-dashboard',
