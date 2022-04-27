@@ -33,6 +33,8 @@ const routes: Routes = [
     path: 'regulamin',
     component: RegulaminComponent
   },
+  
+  
   {
     path: 'admin',
     component: AdminDashboardComponent,
@@ -52,6 +54,16 @@ const routes: Routes = [
     path: 'uzytkownik-dashboard',
     component: UzytkownikDashboardComponent,
     canActivate:[NormalGuard],
+    children:[
+      {
+        path:'',
+        component: WelcomeComponent,
+      },
+      {
+        path:'profil',
+        component: ProfilComponent,
+      }
+    ]
   }
 ];
 

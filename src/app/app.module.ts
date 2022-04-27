@@ -30,6 +30,7 @@ import { MatCardModule } from '@angular/material/card';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MatTableModule } from '@angular/material/table';
+import { UserSidebarComponent } from './uzytkownik/user-sidebar/user-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { MatTableModule } from '@angular/material/table';
     MenuComponent,
     ProfilComponent,
     SidebarComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    UserSidebarComponent
   ],
   imports: [
     BrowserModule,

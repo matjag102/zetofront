@@ -7,7 +7,7 @@
       <button mat-raised-button routerLink="logowanie" *ngIf="!isLoggedIn">LOGOWANIE</button>
       <button mat-stroked-button routerLink="rejestracja" *ngIf="!isLoggedIn">REJESTRACJA</button>
       <span class="example-spacer" *ngIf="isLoggedIn"></span>
-      <button mat-button *ngIf="isLoggedIn" routerLink="/admin/profil"><mat-icon>account_circle</mat-icon>
+      <button mat-button *ngIf="isLoggedIn" routerLink='admin/profil'><mat-icon>account_circle</mat-icon>
         Witaj {{login.getUser().imie}} {{login.getUser().nazwisko}}!
       </button>
       <button mat-raised-button (click)="wyloguj()" *ngIf="isLoggedIn && user" color="warn">WYLOGUJ SIĘ!</button>

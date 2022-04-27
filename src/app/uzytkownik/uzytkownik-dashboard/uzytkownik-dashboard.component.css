@@ -1,0 +1,9 @@
+.menu{
+    float: left;
+    width: 20%;
+}
+.zawartosc{
+    float: left;
+    width: 70%;
+    margin-left: 20px;
+}
