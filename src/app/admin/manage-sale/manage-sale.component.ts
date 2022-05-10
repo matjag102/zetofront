@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { SalaService } from 'src/app/service/sala.service';
 import Swal from 'sweetalert2';
-import { SalaService } from '../service/sala.service';
 
 @Component({
-  selector: 'app-rezerwacja',
-  templateUrl: './rezerwacja.component.html',
-  styleUrls: ['./rezerwacja.component.css']
+  selector: 'app-manage-sale',
+  templateUrl: './manage-sale.component.html',
+  styleUrls: ['./manage-sale.component.css']
 })
-export class RezerwacjaComponent implements OnInit {
+export class ManageSaleComponent implements OnInit {
 
   sale=[
   ]
@@ -25,5 +25,6 @@ export class RezerwacjaComponent implements OnInit {
       }
       )
   }
-
 }
+
+  

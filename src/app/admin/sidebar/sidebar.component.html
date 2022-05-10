@@ -10,7 +10,7 @@
         <button mat-list-item routerLink="/admin/dodaj-sale"> 
             <mat-icon mat-list-icon >add_circle</mat-icon>Dodaj salę
         </button>
-        <button mat-list-item> 
+        <button mat-list-item routerLink="/admin/manage-sale"> 
             <mat-icon mat-list-icon>edit</mat-icon>Zarządzaj salami
         </button>
         <button mat-list-item (click)="wyloguj()" *ngIf="isLoggedIn && user"> 

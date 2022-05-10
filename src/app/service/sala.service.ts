@@ -10,6 +10,6 @@ export class SalaService {
   constructor(private _http:HttpClient) { }
 
   public sale(){
-    return this._http.get(`${baseUrl}/pomieszczenie/`)
+    return this._http.get(`${baseUrl}/pomieszczenie/findall`)
   }
 }

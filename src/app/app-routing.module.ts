@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { DodajSaleComponent } from './admin/dodaj-sale/dodaj-sale.component';
+import { ManageSaleComponent } from './admin/manage-sale/manage-sale.component';
 import { GlownaComponent } from './glowna/glowna.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { LogowanieComponent } from './logowanie/logowanie.component';
@@ -57,6 +58,10 @@ const routes: Routes = [
       {
         path:'dodaj-sale',
         component: DodajSaleComponent,
+      },
+      {
+        path:'manage-sale',
+        component: ManageSaleComponent,
       }
     ]
   },

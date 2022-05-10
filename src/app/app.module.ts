@@ -34,6 +34,8 @@ import { UserSidebarComponent } from './uzytkownik/user-sidebar/user-sidebar.com
 import { RezerwacjaComponent } from './rezerwacja/rezerwacja.component';
 import { DodajSaleComponent } from './admin/dodaj-sale/dodaj-sale.component';
 import {MatSelectModule} from '@angular/material/select';
+import {FileUploadModule} from 'primeng/fileupload';
+import { ManageSaleComponent } from './admin/manage-sale/manage-sale.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import {MatSelectModule} from '@angular/material/select';
     UserSidebarComponent,
     RezerwacjaComponent,
     DodajSaleComponent,
+    ManageSaleComponent,
 
   ],
   imports: [
@@ -74,6 +77,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatCardModule,
     MatTableModule,
     MatSelectModule,
+    FileUploadModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
