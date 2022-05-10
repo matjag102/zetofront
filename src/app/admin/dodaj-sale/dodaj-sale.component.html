@@ -1,0 +1,56 @@
+<mat-card>
+    <h1>Dodaj nową salę</h1>
+    <div class="center margin-top">
+        <form>
+            <div class="pola">
+                <div class="item">
+                    <mat-form-field>
+                        <mat-label>Nazwa</mat-label>
+                        <input matInput placeholder="" type="text">
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <mat-form-field>
+                        <mat-label>Typ</mat-label>
+                        <mat-select>
+                            <mat-option>
+                                Sala bankietowa
+                            </mat-option>
+                            <mat-option>
+                                Sala weselna
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <mat-form-field>
+                        <mat-label>Miasto</mat-label>
+                        <input matInput placeholder="" type="text">
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <mat-form-field>
+                        <mat-label>Ulica</mat-label>
+                        <input matInput placeholder="" type="text">
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <mat-form-field>
+                        <mat-label>Kod pocztowy</mat-label>
+                        <input matInput placeholder="" type="text">
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="guziki">
+                <div class="item">
+                    <button mat-raised-button color="warn" type="reset">Reset</button>
+                </div>
+                <div class="item">
+                    <button mat-raised-button color="primary" type="submit">Dodaj</button>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</mat-card>

@@ -21,6 +21,8 @@ export class MenuComponent implements OnInit {
       this.isLoggedIn=this.login.isLoggedIn();
       this.user=this.login.getUser();
     });
+
+    
   }
 
   public wyloguj(){
@@ -29,5 +31,6 @@ export class MenuComponent implements OnInit {
       //this.login.loginStatusSubject.next(false);
 
   }
+  
 
 }

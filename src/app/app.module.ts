@@ -31,6 +31,9 @@ import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MatTableModule } from '@angular/material/table';
 import { UserSidebarComponent } from './uzytkownik/user-sidebar/user-sidebar.component';
+import { RezerwacjaComponent } from './rezerwacja/rezerwacja.component';
+import { DodajSaleComponent } from './admin/dodaj-sale/dodaj-sale.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { UserSidebarComponent } from './uzytkownik/user-sidebar/user-sidebar.com
     ProfilComponent,
     SidebarComponent,
     WelcomeComponent,
-    UserSidebarComponent
+    UserSidebarComponent,
+    RezerwacjaComponent,
+    DodajSaleComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -67,6 +73,7 @@ import { UserSidebarComponent } from './uzytkownik/user-sidebar/user-sidebar.com
     MatListModule,
     MatCardModule,
     MatTableModule,
+    MatSelectModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+<mat-card class="mt10" *ngFor="let s of sale">
+    <mat-card-header>
+        <mat-card-title>
+            {{s.nazwa}}
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-subtitle>
+        <p>Adres: {{s.miasto}} {{s.ulica}}</p>
+    </mat-card-subtitle>
+    <mat-card-content>
+        <div class="opis">
+        <p class="item">Tutaj jakiś krótki opis sali</p>
+        <img class="item" mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+        </div>
+    </mat-card-content>
+    
+    <mat-card-actions align="end">
+        <button mat-raised-button color="primary">Wyświetl</button>
+    </mat-card-actions>
+</mat-card>
