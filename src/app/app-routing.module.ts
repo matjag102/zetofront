@@ -6,6 +6,7 @@ import { ManageSaleComponent } from './admin/manage-sale/manage-sale.component';
 import { GlownaComponent } from './glowna/glowna.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { LogowanieComponent } from './logowanie/logowanie.component';
+import { ProfilPomieszczenieComponent } from './profil-pomieszczenie/profil-pomieszczenie.component';
 import { ProfilComponent } from './profil/profil.component';
 import { RegulaminComponent } from './regulamin/regulamin.component';
 import { RejestracjaComponent } from './rejestracja/rejestracja.component';
@@ -38,10 +39,12 @@ const routes: Routes = [
   },
   {
     path: 'rezerwacja',
-    component: RezerwacjaComponent
+    component: RezerwacjaComponent,
   },
-  
-  
+  {
+    path: 'profil-pomieszczenie',
+    component: ProfilPomieszczenieComponent,
+  },
   {
     path: 'admin',
     component: AdminDashboardComponent,

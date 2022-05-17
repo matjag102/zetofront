@@ -36,6 +36,10 @@ import { DodajSaleComponent } from './admin/dodaj-sale/dodaj-sale.component';
 import {MatSelectModule} from '@angular/material/select';
 import {FileUploadModule} from 'primeng/fileupload';
 import { ManageSaleComponent } from './admin/manage-sale/manage-sale.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { ProfilPomieszczenieComponent } from './profil-pomieszczenie/profil-pomieszczenie.component';
+
+
 
 @NgModule({
   declarations: [
@@ -57,7 +61,7 @@ import { ManageSaleComponent } from './admin/manage-sale/manage-sale.component';
     RezerwacjaComponent,
     DodajSaleComponent,
     ManageSaleComponent,
-
+    ProfilPomieszczenieComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +82,7 @@ import { ManageSaleComponent } from './admin/manage-sale/manage-sale.component';
     MatTableModule,
     MatSelectModule,
     FileUploadModule,
+    NgxPaginationModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

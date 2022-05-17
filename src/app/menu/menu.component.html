@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
       <button mat-button routerLink="">STRONA GŁÓWNA</button>
-      <button mat-button routerLink="rezerwacja">REZERWACJA</button>
+      <button mat-button routerLink="rezerwacja" *ngIf="isLoggedIn">REZERWACJA</button>
       <button mat-button routerLink="kontakt">KONTAKT</button>
       <button mat-button routerLink="regulamin">REGULAMIN</button>
       <span class="example-spacer" *ngIf="!isLoggedIn"></span>

@@ -1,20 +1,22 @@
-<mat-card class="mt10" *ngFor="let s of sale">
+<mat-card class="mt10" *ngFor="let s of sale |  paginate: { itemsPerPage: 3, currentPage: page, totalItems:totalLenght}">
     <mat-card-header>
         <mat-card-title>
             {{s.nazwa}}
         </mat-card-title>
     </mat-card-header>
     <mat-card-subtitle>
-        <p>Adres: {{s.miasto}} {{s.ulica}}</p>
+        <p>Adres: {{s.miasto}}, {{s.ulica}} {{s.numer}}</p>
     </mat-card-subtitle>
     <mat-card-content>
         <div class="opis">
-        <p class="item">Tutaj jakiś krótki opis sali</p>
-        <img class="item" mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+        <p class="item">{{s.opis}}</p>
+        <img class="item" mat-card-lg-image src="https://samequizy.pl/wp-content/uploads/2021/04/20/images_ef55a3cec90c.jpg" >
         </div>
     </mat-card-content>
     
     <mat-card-actions align="end">
-        <button mat-raised-button color="primary">Wyświetl</button>
+        <button mat-raised-button color="primary" routerLink="profil-pomieszczenie">Wybierz</button>
     </mat-card-actions>
 </mat-card>
+<pagination-controls class="my-pagination" previousLabel="Następna" nextLabel="Poprzednia" (pageChange)="page = $event"></pagination-controls>
+

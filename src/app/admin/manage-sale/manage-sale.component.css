@@ -1,9 +1,14 @@
 mat-card
 {
-    margin-top: 20px;
     border: 10px;
+    margin-bottom: 15px;
 }
 .opis{
     display: flex;
     justify-content: space-between;
+}
+.my-pagination{
+    text-align: center;
+    padding: 25px;
+    font-weight: 500;
 }

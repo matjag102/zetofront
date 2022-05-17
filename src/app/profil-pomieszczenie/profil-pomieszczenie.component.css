@@ -7,8 +7,3 @@ mat-card
     display: flex;
     justify-content: space-between;
 }
-
-.my-pagination{
-    text-align: center;
-    padding: 5px;
-}

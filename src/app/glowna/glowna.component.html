@@ -5,7 +5,8 @@
       </div>
       <div class="galeria-right">
           <div class="oferta">
-          <span>Sprawdź naszą ofertę</span>
+            <button mat-raised-button color="primary" style="width: 300px; height:100px" *ngIf="isLoggedIn" routerLink="rezerwacja">SPRAWDŹ NASZĄ OFERTĘ!</button>
+            <button mat-raised-button color="primary" style="width: 500px; height:100px" *ngIf="!isLoggedIn" routerLink="rejestracja">ZAREJESTRUJ SIĘ, BY POZNAĆ NASZĄ OFERTĘ!</button>
           </div>
       </div>
   </div>

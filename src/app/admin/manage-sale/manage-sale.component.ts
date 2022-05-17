@@ -13,10 +13,14 @@ export class ManageSaleComponent implements OnInit {
   ]
   constructor(private _sala:SalaService) { }
 
+  totalLenght:any;
+  page:number=1;
+
   ngOnInit(): void {
     this._sala.sale().subscribe(
       (data:any)=>{
         this.sale=data;
+        this.totalLenght=data.length;
         console.log(this.sale);
       },
       (error)=>{
