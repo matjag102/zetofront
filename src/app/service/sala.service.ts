@@ -16,4 +16,16 @@ export class SalaService {
   public szczegoly(idPomieszczenie){
     return this._http.get(`${baseUrl}/pomieszczenie/findid/${idPomieszczenie}`)
   }
+
+  public addPomieszczenie(pomieszczenie){
+    return this._http.post(`${baseUrl}/pomieszczenie/add`,pomieszczenie)
+  }
+
+  public deletePomieszczenie(idPomieszczenie){
+    return this._http.delete(`${baseUrl}/pomieszczenie/delete/${idPomieszczenie}`);
+  }
+
+  public updatePomieszczenie(idPomieszczenie,pomieszczenie){
+    return this._http.post(`${baseUrl}/pomieszczenie/edit/${idPomieszczenie}`,pomieszczenie);
+  }
 }

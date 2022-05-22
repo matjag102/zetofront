@@ -29,6 +29,30 @@ export class ManageSaleComponent implements OnInit {
       }
       )
   }
+  //delete
+  deletePomieszczenie(idPomieszczenie){
+    Swal.fire({
+      icon: 'info',
+      title: 'Czy na pewno chcesz usunąć?',
+      confirmButtonText: 'Usuń',
+      showCancelButton: true,
+    }).then((result)=>{
+      if(result.isConfirmed){
+
+        this._sala.deletePomieszczenie(idPomieszczenie).subscribe(
+          (data:any)=>{
+            Swal.fire('Gotowe','Sala została usunięta','success');
+            window.location.reload();
+          },
+          (error)=>{
+            Swal.fire('Błąd','Sala nie została usunieta','error');
+          }
+          )
+      }
+    })
+
+    
+  }
 }
 
   

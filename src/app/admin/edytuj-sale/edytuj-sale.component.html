@@ -1,18 +1,18 @@
 <mat-card>
-    <h1>Dodaj nową salę</h1>
+    <h1>Edytuj salę</h1>
     <div class="center margin-top">
-        <form (ngSubmit)="addPomieszczenie()">
+        <form>
             <div class="pola">
                 <div class="item">
                     <mat-form-field>
                         <mat-label>Nazwa</mat-label>
-                        <input name="nazwa" matInput placeholder="Nazwa pomieszczenia" type="text" [(ngModel)]="pomieszczenieData.nazwa">
+                        <input name="nazwa" matInput placeholder="Nazwa pomieszczenia" type="text" [(ngModel)]="sala.nazwa">
                     </mat-form-field>
                 </div>
                 <div class="item">
                     <mat-form-field>
                         <mat-label>Typ</mat-label>
-                        <mat-select name="typ" [(ngModel)]="pomieszczenieData.typ">
+                        <mat-select name="typ" [(ngModel)]="sala.typ">
                             <mat-option value="Sala bankietowa">Sala bankietowa</mat-option>
                             <mat-option value="Sala konferencyjna">Sala konferencyjna</mat-option>
                             <mat-option value="Sala weselna">Sala weselna</mat-option>
@@ -23,7 +23,7 @@
                 </div>
                 <mat-form-field>
                     <mat-label>Województwo</mat-label>
-                    <mat-select name="wojewodztwo" [(ngModel)]="pomieszczenieData.wojewodztwo">
+                    <mat-select name="wojewodztwo" [(ngModel)]="sala.wojewodztwo">
                         <mat-option value="dolnośląskie">dolnośląskie</mat-option>
                         <mat-option value="kujawsko-pomorskie">kujawsko-pomorskie</mat-option>
                         <mat-option value="lubelskie">lubelskie</mat-option>
@@ -45,38 +45,38 @@
                 <div class="item">
                     <mat-form-field>
                         <mat-label>Miasto</mat-label>
-                        <input name="miasto" matInput placeholder="Miasto" [(ngModel)]="pomieszczenieData.miasto" type="text">
+                        <input name="miasto" matInput placeholder="Miasto" [(ngModel)]="sala.miasto" type="text">
                     </mat-form-field>
                 </div>
                 <div class="item">
                     <mat-form-field>
                         <mat-label>Ulica</mat-label>
-                        <input name="ulica" matInput placeholder="Ulica" [(ngModel)]="pomieszczenieData.ulica" type="text">
+                        <input name="ulica" matInput placeholder="Ulica" [(ngModel)]="sala.ulica" type="text">
                     </mat-form-field>
                 </div>
                 <div class="item">
                     <mat-form-field>
                         <mat-label>Numer domu/lokalu</mat-label>
-                        <input name="numer" matInput placeholder="Numer lokalu/domu" [(ngModel)]="pomieszczenieData.numer" type="text">
+                        <input name="numer" matInput placeholder="Numer lokalu/domu" [(ngModel)]="sala.numer" type="text">
                     </mat-form-field>
                 </div>
                 <div class="item">
                     <mat-form-field>
                         <mat-label>Kod pocztowy</mat-label>
-                        <input name="kodPocztowy" matInput placeholder="Kod pocztowy" [(ngModel)]="pomieszczenieData.kodPocztowy" type="text">
+                        <input name="kodPocztowy" matInput placeholder="Kod pocztowy" [(ngModel)]="sala.kodPocztowy" type="text">
                     </mat-form-field>
                 </div>
                 <mat-form-field>
                     <mat-label>Opis</mat-label>
-                    <textarea name="opis" matInput placeholder="Wstaw krótki opis pomieszczenia" cols="30" rows="10" [(ngModel)]="pomieszczenieData.opis" ></textarea>
+                    <textarea name="opis" matInput placeholder="Wstaw krótki opis pomieszczenia" cols="30" rows="10" [(ngModel)]="sala.opis" ></textarea>
                 </mat-form-field>
             </div>
             <div class="guziki">
                 <div class="item">
-                    <button mat-raised-button color="warn" type="reset">Reset</button>
+                    <button mat-raised-button color="warn" type="reset" routerLink="/admin/manage-sale">Cofnij</button>
                 </div>
                 <div class="item">
-                    <button mat-raised-button color="primary" type="submit">Dodaj</button>
+                    <button mat-raised-button color="primary" (click)="updateSala()">Edytuj</button>
                 </div>
                 
             </div>

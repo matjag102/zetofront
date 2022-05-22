@@ -18,8 +18,11 @@
     </mat-card-content>
     
     <mat-card-actions align="end">
-        <button mat-raised-button color="primary">
+        <button mat-raised-button color="primary" [routerLink]="'/admin/edytuj-sale/'+s.idPomieszczenie">
             <mat-icon>settings</mat-icon> Zarządzaj
+        </button>
+        <button mat-raised-button color="warn" (click)="deletePomieszczenie(s.idPomieszczenie)">
+            <mat-icon>delete</mat-icon> Usuń
         </button>
     </mat-card-actions>
 </mat-card>
