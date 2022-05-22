@@ -1,21 +1,57 @@
 <router-outlet></router-outlet>
 <mat-card class="mt10">
-    <mat-card-header>
-        <mat-card-title>
-            pomieszczenie.nazwa
-        </mat-card-title>
-    </mat-card-header>
-    <mat-card-subtitle>
-        <p>Adres: pomieszczenie.miasto, pomieszczenie.ulica pomieszczenie.numer</p>
-    </mat-card-subtitle>
-    <mat-card-content>
-        <div class="opis">
-        <p class="item">pomieszczenie.opis</p>
-        <img class="item" mat-card-lg-image src="https://samequizy.pl/wp-content/uploads/2021/04/20/images_ef55a3cec90c.jpg" >
+    <div class="form-container mat-elevation-z5">
+        <h1>{{szczegoly.nazwa}}</h1>
+        <div class="srodek">
+            <mat-card-subtitle>
+                Adres <br/>{{szczegoly.miasto}}, {{szczegoly.ulica}} {{szczegoly.numer}}<br/>
+                Typ <br/>{{szczegoly.typ}}
+            </mat-card-subtitle>
+            <mat-card-content>
+                <div class="opis">
+                <p class="item">{{szczegoly.opis}}</p>
+                </div>
+            </mat-card-content>
         </div>
-    </mat-card-content>
-    
-    <mat-card-actions align="end">
-        <button mat-raised-button color="primary">Wyświetl</button>
-    </mat-card-actions>
+    </div>
+    <div class="odstep"></div>
+    <mat-divider></mat-divider>
+    <div class="odstep"></div>
+        <div class="galeria">
+            <h1>Galeria Zdjęciowa</h1>
+            <app-carousel [images]="images" [autoSlide]="true" [controls]="false"></app-carousel>
+        </div>
+    <div class="odstep"></div>
+    <mat-divider></mat-divider>
+    <div class="odstep"></div>
+         <h1>Rezerwacja Pomieszczenia</h1>
+         <div class="form-container mat-elevation-z5">
+            <form>
+                <div class="center margin-top">
+                    <label>Data startu rezerwacji:</label>
+                </div>
+                <div class="center margin-top">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Wybierz datę</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                </div>
+                <div class="center margin-top">
+                    <label>Data końca rezerwacji:</label>
+                </div>
+                <div class="center margin-top">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Wybierz datę</mat-label>
+                        <input matInput [matDatepicker]="picker1">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                      </mat-form-field>
+                </div>
+                <div class="center margin-top">
+                    <button mat-raised-button color="primary" type="submit">Zarezerwuj</button>
+                </div>
+            </form>
+        </div>
 </mat-card>

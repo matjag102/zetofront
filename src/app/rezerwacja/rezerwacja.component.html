@@ -1,11 +1,13 @@
 <mat-card class="mt10" *ngFor="let s of sale |  paginate: { itemsPerPage: 3, currentPage: page, totalItems:totalLenght}">
     <mat-card-header>
         <mat-card-title>
-            {{s.nazwa}}
+            {{s.idPomieszczenie}} {{s.nazwa}}
         </mat-card-title>
     </mat-card-header>
     <mat-card-subtitle>
-        <p>Adres: {{s.miasto}}, {{s.ulica}} {{s.numer}}</p>
+        <p>Adres: {{s.miasto}}, {{s.ulica}} {{s.numer}} <br/>
+            {{s.typ}}
+        </p>
     </mat-card-subtitle>
     <mat-card-content>
         <div class="opis">
@@ -15,7 +17,7 @@
     </mat-card-content>
     
     <mat-card-actions align="end">
-        <button mat-raised-button color="primary" routerLink="/profil-pomieszczenie">Wybierz</button>
+        <button mat-raised-button color="primary" [routerLink]="'/profil-pomieszczenie/'+s.idPomieszczenie" >Wybierz</button>
     </mat-card-actions>
 </mat-card>
 <pagination-controls class="my-pagination" previousLabel="Następna" nextLabel="Poprzednia" (pageChange)="page = $event"></pagination-controls>

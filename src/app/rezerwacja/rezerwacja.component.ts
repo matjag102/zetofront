@@ -27,7 +27,7 @@ export class RezerwacjaComponent implements OnInit {
         console.log(error);
         Swal.fire('Błąd','Błąd podczas ładowania strony','error');
       }
-      )
+      ) 
   }
 
 }

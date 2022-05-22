@@ -42,7 +42,7 @@ const routes: Routes = [
     component: RezerwacjaComponent,
   },
   {
-    path: 'profil-pomieszczenie',
+    path: 'profil-pomieszczenie/:idPomieszczenie',
     component: ProfilPomieszczenieComponent,
   },
   {

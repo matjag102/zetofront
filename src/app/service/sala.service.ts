@@ -12,4 +12,8 @@ export class SalaService {
   public sale(){
     return this._http.get(`${baseUrl}/pomieszczenie/findall`)
   }
+
+  public szczegoly(idPomieszczenie){
+    return this._http.get(`${baseUrl}/pomieszczenie/findid/${idPomieszczenie}`)
+  }
 }

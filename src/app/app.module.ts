@@ -38,7 +38,9 @@ import {FileUploadModule} from 'primeng/fileupload';
 import { ManageSaleComponent } from './admin/manage-sale/manage-sale.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ProfilPomieszczenieComponent } from './profil-pomieszczenie/profil-pomieszczenie.component';
-
+import {MatDividerModule} from '@angular/material/divider';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -82,7 +84,10 @@ import { ProfilPomieszczenieComponent } from './profil-pomieszczenie/profil-pomi
     MatTableModule,
     MatSelectModule,
     FileUploadModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
