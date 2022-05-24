@@ -42,7 +42,9 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { EdytujSaleComponent } from './admin/edytuj-sale/edytuj-sale.component';
-
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {MenuItem} from 'primeng/api';                  //api
+import {CalendarModule} from 'primeng/calendar';
 
 @NgModule({
   declarations: [
@@ -89,7 +91,9 @@ import { EdytujSaleComponent } from './admin/edytuj-sale/edytuj-sale.component';
     NgxPaginationModule,
     MatDividerModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    AccordionModule,
+    CalendarModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
