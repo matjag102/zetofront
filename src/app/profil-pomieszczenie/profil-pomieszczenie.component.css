@@ -45,3 +45,8 @@ h1{
 .srodek{
     text-align: center;
 }
+
+.special-date {
+  background-color: red;
+  border-radius: 100%;
+}

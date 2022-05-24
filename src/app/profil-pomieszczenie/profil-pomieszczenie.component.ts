@@ -7,6 +7,7 @@ import { FormControl } from '@angular/forms';
 import {CalendarModule} from 'primeng/calendar';
 import { RezerwacjaComponent } from '../rezerwacja/rezerwacja.component';
 import { RezerwacjaService } from '../service/rezerwacja.service';
+import {MatCalendarCellClassFunction, MatCalendarCellCssClasses} from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-profil-pomieszczenie',
@@ -14,14 +15,25 @@ import { RezerwacjaService } from '../service/rezerwacja.service';
   styleUrls: ['./profil-pomieszczenie.component.css']
 })
 export class ProfilPomieszczenieComponent implements OnInit {
- 
   constructor(private _route: ActivatedRoute, private _sala:SalaService, private _rezerwacja:RezerwacjaService) { }
+  
   dane={
     id: 0,
     dataStop: new Date(),
     dataStart: new Date(),
   }
+  //from=new Date();
+  //to=new Date();
+  //j=0;
+  minD="";
+  rezerwacje=[]
+
+  zarezerwowane=[]
+
+  kolizja=false;
+
   
+
 
   idPomieszczenie=0;
   szczegoly: any;
@@ -52,7 +64,9 @@ export class ProfilPomieszczenieComponent implements OnInit {
     },
   ]
 
+
   ngOnInit(): void {
+    this.minD=new Date().toDateString()
     this.idPomieszczenie = this._route.snapshot.params['idPomieszczenie'];
     this.dane.id=this.idPomieszczenie;
     // alert(this.idPomieszczenie);
@@ -66,12 +80,54 @@ export class ProfilPomieszczenieComponent implements OnInit {
         Swal.fire('Błąd','Błąd podczas ładowania strony','error');
       }
       )
+      let year: any;
+      let month: any
+      let day: any
+      let nowadata: any
+      
+      this._rezerwacja.getRezerwacjePom(this.idPomieszczenie).subscribe(
+        (data:any)=>{
+          this.rezerwacje=data;
+          console.log(data);
+          for(var i=0; i<this.rezerwacje.length;i++){
+            let from=new Date(this.rezerwacje[i].dataStart);
+            let to=new Date(this.rezerwacje[i].dataStop);
+            //console.log(from);
+            //from.setDate(from.getDate()+1)
+            //console.log(from);
+            //console.log(this.from)
+            while(from<=to){
+              year=from.getFullYear();
+              month=from.getMonth()+1;
+              day=from.getDate();
+              nowadata=year+'/'+month+'/'+day;
+              this.zarezerwowane.push(nowadata);
+              from.setDate(from.getDate()+1)
 
+            }
+          }
+          
+        },
+        (error)=>{
+          console.log(error);
+          Swal.fire('Błąd','Błąd podczas ładowania strony','error');
+        }
+        );
+
+        
+
+
+  
   }
   dodajRezerwacje(){
-    
     console.log(this.dane.dataStart);
     console.log(this.dane.dataStop);
+    for(var i=0; i<=this.zarezerwowane.length; i++){
+      if(this.zarezerwowane[i]>=this.dane.dataStart && this.zarezerwowane[i]<=this.dane.dataStop){
+        this.kolizja=true;
+      }
+    }
+    if(this.kolizja==false){
     this._rezerwacja.addRezerwacja(this.dane).subscribe(
       (data)=>{
        Swal.fire('Gotowe', 'dodano rezerwacje','success');
@@ -85,6 +141,11 @@ export class ProfilPomieszczenieComponent implements OnInit {
        Swal.fire('Bład','Bład podczas dodawania rezerwacji','error');
       }
     )
+    }
+    else{
+      alert("kolizja")
+    }
   }
+ 
 
 }

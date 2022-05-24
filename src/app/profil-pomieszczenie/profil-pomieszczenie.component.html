@@ -1,4 +1,6 @@
 <router-outlet></router-outlet>
+
+{{zarezerwowane|json}}
     <div class="container">
         <div class="left">
             <h1>{{szczegoly.nazwa}}</h1>
@@ -24,6 +26,9 @@
         <div class="right">
             <h1>Rezerwacja Pomieszczenia</h1>
             <div class="form-container mat-elevation-z5">
+                <mat-card class="demo-inline-calendar-card">
+                    <mat-calendar></mat-calendar>
+                </mat-card>
                 <form (ngSubmit)="dodajRezerwacje()">
                     <div class="center margin-top">
                         <label>Data startu rezerwacji:</label>
@@ -50,4 +55,5 @@
             </div>
         </div>
         <div class="czysc"></div>
+        
     </div>
