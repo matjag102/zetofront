@@ -1,53 +1,53 @@
 <router-outlet></router-outlet>
-<mat-card class="mt10">
-    <div class="form-container mat-elevation-z5">
-        <h1>{{szczegoly.nazwa}}</h1>
-        <div class="srodek">
-            <mat-card-subtitle>
-                Adres <br/>{{szczegoly.miasto}}, {{szczegoly.ulica}} {{szczegoly.numer}}<br/>
-                Typ <br/>{{szczegoly.typ}}
-            </mat-card-subtitle>
-            <mat-card-content>
-                <div class="opis">
-                <p class="item">{{szczegoly.opis}}</p>
+    <div class="container">
+        <div class="left">
+            <h1>{{szczegoly.nazwa}}</h1>
+            <div class="form-container mat-elevation-z10">
+                <div class="srodek">
+                    <mat-card-subtitle>
+                        Adres <br/>{{szczegoly.miasto}}, {{szczegoly.ulica}} {{szczegoly.numer}}<br/><br/>
+                        Typ <br/>{{szczegoly.typ}} <br/><br/>
+                    </mat-card-subtitle>
+                    <mat-card-content>
+                        Opis
+                        <div class="opis">
+                        <p class="item">{{szczegoly.opis}}</p>
+                        </div>
+                    </mat-card-content>
                 </div>
-            </mat-card-content>
+            </div>
         </div>
-    </div>
-    <div class="odstep"></div>
-    <mat-divider></mat-divider>
-    <div class="odstep"></div>
         <div class="galeria">
             <h1>Galeria Zdjęciowa</h1>
             <app-carousel [images]="images" [autoSlide]="true" [controls]="false"></app-carousel>
         </div>
-    <div class="odstep"></div>
-    <mat-divider></mat-divider>
-    <div class="odstep"></div>
-         <h1>Rezerwacja Pomieszczenia</h1>
-         <div class="form-container mat-elevation-z5">
-            <form (ngSubmit)="dodajRezerwacje()">
-                <div class="center margin-top">
-                    <label>Data startu rezerwacji:</label>
-                </div>
-                <div class="center margin-top">
-                    <mat-form-field appearance="fill">
-                        <mat-label>Wybierz datę</mat-label>
-                        <input matInput name="dane.dataStart" [(ngModel)]="dane.dataStart" type="date">
-                    </mat-form-field>
-                </div>
-                <div class="center margin-top">
-                    <label>Data końca rezerwacji:</label>
-                </div>
-                <div class="center margin-top">
-                    <mat-form-field appearance="fill">
-                        <mat-label>Wybierz datę</mat-label>
-                        <input matInput name="dane.dataStop" [(ngModel)]="dane.dataStop" type="date">
-                    </mat-form-field>
-                </div>
-                <div class="center margin-top">
-                    <button mat-raised-button color="primary" type="submit">Zarezerwuj</button>
-                </div>
-            </form>
+        <div class="right">
+            <h1>Rezerwacja Pomieszczenia</h1>
+            <div class="form-container mat-elevation-z5">
+                <form (ngSubmit)="dodajRezerwacje()">
+                    <div class="center margin-top">
+                        <label>Data startu rezerwacji:</label>
+                    </div>
+                    <div class="center margin-top">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Wybierz datę</mat-label>
+                            <input matInput name="dane.dataStart" [(ngModel)]="dane.dataStart" type="date">
+                        </mat-form-field>
+                    </div>
+                    <div class="center margin-top">
+                        <label>Data końca rezerwacji:</label>
+                    </div>
+                    <div class="center margin-top">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Wybierz datę</mat-label>
+                            <input matInput name="dane.dataStop" [(ngModel)]="dane.dataStop" type="date">
+                        </mat-form-field>
+                    </div>
+                    <div class="center margin-top">
+                        <button mat-raised-button color="primary" type="submit">Zarezerwuj</button>
+                    </div>
+                </form>
+            </div>
         </div>
-</mat-card>
+        <div class="czysc"></div>
+    </div>

@@ -15,4 +15,7 @@ export class RezerwacjaService {
   public getRezerwacjePom(id){
     return this._http.get(`${baseUrl}/rezerwacja/findidpom/${id}`)
   }
+  public getRezerwacjeUzytkownik(idUzytkownik){
+    return this._http.get(`${baseUrl}/rezerwacja/findiduz/${idUzytkownik}`)
+  }
 }

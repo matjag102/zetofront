@@ -13,7 +13,6 @@ import { MatInputModule } from '@angular/material/input';
 import { RejestracjaComponent } from './rejestracja/rejestracja.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { RegulaminComponent } from './regulamin/regulamin.component';
-import { GlownaOpisComponent } from './glowna-opis/glowna-opis.component';
 import { CarouselModule } from './carousel/carousel.module';
 import { GlownaComponent } from './glowna/glowna.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -45,6 +44,7 @@ import { EdytujSaleComponent } from './admin/edytuj-sale/edytuj-sale.component';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
 import {MenuItem} from 'primeng/api';                  //api
 import {CalendarModule} from 'primeng/calendar';
+import { MojeRezerwacjeComponent } from './moje-rezerwacje/moje-rezerwacje.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +53,6 @@ import {CalendarModule} from 'primeng/calendar';
     RejestracjaComponent,
     KontaktComponent,
     RegulaminComponent,
-    GlownaOpisComponent,
     GlownaComponent,
     StopkaComponent,
     AdminDashboardComponent,
@@ -68,6 +67,7 @@ import {CalendarModule} from 'primeng/calendar';
     ManageSaleComponent,
     ProfilPomieszczenieComponent,
     EdytujSaleComponent,
+    MojeRezerwacjeComponent,
   ],
   imports: [
     BrowserModule,

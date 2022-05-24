@@ -1,0 +1,19 @@
+<h1>Twoje Rezerwacje</h1>
+<mat-card *ngFor="let r of rezerwacje">
+    <mat-card-header>
+        <mat-card-title>
+           Rezerwacja pomieszczenia: {{r.idPomieszczenie.nazwa}}, {{r.idPomieszczenie.miasto}} {{r.idPomieszczenie.kodPocztowy}}
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-header>
+        <mat-card-title>
+            Początek rezerwacji: {{r.dataStart}}
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-header>
+        <mat-card-title>
+            Koniec rezerwacji: {{r.dataStop}}
+        </mat-card-title>
+    </mat-card-header>
+</mat-card>
+

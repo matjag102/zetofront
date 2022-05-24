@@ -7,6 +7,7 @@ import { ManageSaleComponent } from './admin/manage-sale/manage-sale.component';
 import { GlownaComponent } from './glowna/glowna.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { LogowanieComponent } from './logowanie/logowanie.component';
+import { MojeRezerwacjeComponent } from './moje-rezerwacje/moje-rezerwacje.component';
 import { ProfilPomieszczenieComponent } from './profil-pomieszczenie/profil-pomieszczenie.component';
 import { ProfilComponent } from './profil/profil.component';
 import { RegulaminComponent } from './regulamin/regulamin.component';
@@ -70,7 +71,11 @@ const routes: Routes = [
       {
         path:'edytuj-sale/:idPomieszczenie',
         component: EdytujSaleComponent,
-      }
+      },
+      {
+        path:'moje-rezerwacje',
+        component: MojeRezerwacjeComponent
+      },
     ]
   },
   {
@@ -85,8 +90,11 @@ const routes: Routes = [
       {
         path:'profil',
         component: ProfilComponent,
-      }
-      
+      },
+      {
+        path:'moje-rezerwacje',
+        component: MojeRezerwacjeComponent
+      },
     ]
   }
 ];

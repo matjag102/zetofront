@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GlownaOpisComponent } from './glowna-opis.component';
+import { MojeRezerwacjeComponent } from './moje-rezerwacje.component';
 
-describe('GlownaOpisComponent', () => {
-  let component: GlownaOpisComponent;
-  let fixture: ComponentFixture<GlownaOpisComponent>;
+describe('MojeRezerwacjeComponent', () => {
+  let component: MojeRezerwacjeComponent;
+  let fixture: ComponentFixture<MojeRezerwacjeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlownaOpisComponent ]
+      declarations: [ MojeRezerwacjeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GlownaOpisComponent);
+    fixture = TestBed.createComponent(MojeRezerwacjeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

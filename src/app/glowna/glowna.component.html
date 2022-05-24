@@ -1,5 +1,16 @@
-<app-glowna-opis></app-glowna-opis>
-  <div class="galeria">
+<div class="container">
+  <div class="opis">
+    <h1>Lorem ipsum</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis ante nibh, 
+      posuere efficitur magna accumsan vitae. Fusce vitae nisi dolor. Suspendisse sed pulvinar sapien. 
+      In sit amet lacus pulvinar, suscipit dui sit amet, feugiat nunc. Pellentesque sollicitudin enim vel dui rutrum tempor. 
+      Aliquam tincidunt tempus leo, vitae euismod lorem varius a. Integer varius eros sed quam rhoncus, dapibus porttitor risus 
+      lobortis. Aliquam erat volutpat. Sed rhoncus mi dui, vel tristique turpis condimentum at. Pellentesque sit amet erat dignissim, 
+      luctus risus euismod, pellentesque sapien. Ut varius ut ipsum et facilisis. Phasellus finibus vulputate lacus, eu feugiat velit
+       bibendum ac. Praesent ultrices nisi nibh, ut fermentum elit pharetra ac.
+    </p>
+  </div>
+    <div class="galeria">
       <div class="galeria-left">
         <app-carousel [images]="images" [autoSlide]="true" [controls]="false"></app-carousel>
       </div>
@@ -9,4 +20,5 @@
             <button mat-raised-button color="primary" style="width: 500px; height:100px" *ngIf="!isLoggedIn" routerLink="rejestracja">ZAREJESTRUJ SIĘ, BY POZNAĆ NASZĄ OFERTĘ!</button>
           </div>
       </div>
-  </div>
+    </div>
+</div>
