@@ -7,4 +7,17 @@
   color: white;
   text-align: center;
   font-size: larger;
+  padding: 0;
+  margin: 0;
+}
+.sect{
+  float: left;
+  background-color: #3f51b5;
+  width: 50%;
+  height: 40px;
+  color: white;
+  text-align: left;
+}
+.sect:nth-child(2){
+  text-align: right;
 }

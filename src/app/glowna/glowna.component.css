@@ -1,6 +1,6 @@
 .galeria{
     width: 100%;
-    height: 500px;
+    height: 75%;
     border-radius: 15px;
     box-shadow: 0 8px 16px #dce1e1;
 }
@@ -28,7 +28,7 @@
 }
 .container{
     width: 100%;
-    height: 50%;
+    height: 700px;
     margin: 0;
     padding: 0;
     border-radius: 15px;
@@ -42,12 +42,27 @@
 p{
     font-size: larger;
     width: 100%;
+    height: 15%;
+    letter-spacing: 2px;
 }
 h1{
-    background-color: #3f51b5;
-    color: white;
-    display: block;
     text-align: center;
-    width: 13%;
-    border-radius: 15px;
+    font-size: 40px;
+    border: white 2px;
+    background-color: #3f51b5;
+    color:#dce1e1 ;
+    border-radius: 30px;
+    min-height: 42px;
+    font-weight: bold;
+    padding-top: 2px;
 }
+#opi{
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #3f51b5;
+    text-align: center;
+}
+
+
+

@@ -26,9 +26,9 @@
         <div class="right">
             <h1>Rezerwacja Pomieszczenia</h1>
             <div class="form-container mat-elevation-z5">
-                <mat-card class="demo-inline-calendar-card">
-                    <mat-calendar></mat-calendar>
-                </mat-card>
+            <!--
+                <mat-calendar [dateFilter]="myDateFilter"></mat-calendar>
+                -->
                 <form (ngSubmit)="dodajRezerwacje()">
                     <div class="center margin-top">
                         <label>Data startu rezerwacji:</label>
@@ -36,16 +36,17 @@
                     <div class="center margin-top">
                         <mat-form-field appearance="fill">
                             <mat-label>Wybierz datę</mat-label>
-                            <input matInput name="dane.dataStart" [(ngModel)]="dane.dataStart" type="date">
+                            <input matInput name="dane.dataStart" [(ngModel)]="dane.dataStart" type="date" min="{{this.minD | date:'yyyy-MM-dd'}}" (ngModelChange)="zmianamin()">
                         </mat-form-field>
                     </div>
                     <div class="center margin-top">
                         <label>Data końca rezerwacji:</label>
+                        <span class="al">{{this.komunikat}}</span>
                     </div>
                     <div class="center margin-top">
                         <mat-form-field appearance="fill">
                             <mat-label>Wybierz datę</mat-label>
-                            <input matInput name="dane.dataStop" [(ngModel)]="dane.dataStop" type="date">
+                            <input matInput name="dane.dataStop" [(ngModel)]="dane.dataStop" type="date" (ngModelChange)="onChangeEvent()" min="{{this.minD2 | date:'yyyy-MM-dd'}}">
                         </mat-form-field>
                     </div>
                     <div class="center margin-top">

@@ -2,9 +2,3 @@
 mat-toolbar{
     justify-content: center;
 }
-
-.content{
-    padding: 10px;
-    background-color: aliceblue;
-    height: 100%;
-}
